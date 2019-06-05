@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img id="a1" src="./anh/yasuo1.JPg" onclick="b1()"/>
+<img id="a2" src="./anh/kero2.JPg" onclick="b2()"/>
+<img id="a3" src="./anh/YN3.JPg" onclick="b3()"/>
+<script>let hinh1 = document.getElementById("a1");
+
+function b1() {
+    let c2 = [];
+    c2.push("./anh/yasuo1.JPg");
+    c2.push("./anh/kero1.JPg");
+    c2.push("./anh/YN1.JPg");
+    hinh1.src = c2[Math.floor(Math.random() * 3)];
+    Check();
+}
+let hinh2 = document.getElementById("a2");
+
+function b2() {
+    let c2 = [];
+    c2.push("./anh/yasuo2.JPg");
+    c2.push("./anh/kero2.JPg");
+    c2.push("./anh/YN2.JPg");
+    hinh2.src = c2[Math.floor(Math.random() * 3)];
+    Check();
+}
+let hinh3 = document.getElementById("a3");
+function b3() {
+    let c2 = [];
+    c2.push("./anh/yasuo3.JPg");
+    c2.push("./anh/kero3.JPg");
+    c2.push("./anh/YN3.JPg");
+    hinh3.src = c2[Math.floor(Math.random() * 3)];
+    Check();
+}
+Check();
+function Check() {
+    let style = "margin-left: 400px; box-shadow: red 2px 3px 3px; width: 450px;height: 200px;";
+    if (hinh1.src.indexOf('yasuo1') > 0 && hinh2.src.indexOf('yasuo2') > 0 && hinh3.src.indexOf('yasuo3') > 0) {
+        style = "margin-left: 400px; box-shadow: green 2px 3px 3px; width: 450px;height: 200px;";
+    }
+    else if (hinh1.src.indexOf('YN1') > 0 && hinh2.src.indexOf('YN2') > 0 && hinh3.src.indexOf('YN3') > 0) {
+        style = "margin-left: 400px; box-shadow: green 2px 3px 3px; width: 450px;height: 200px;";
+    }
+    else if (hinh1.src.indexOf('kero1') > 0 && hinh2.src.indexOf('kero2') > 0 && hinh3.src.indexOf('kero3') > 0) {
+        style = "margin-left: 400px; box-shadow: green 2px 3px 3px; width: 450px;height: 200px;";
+    }
+    a1.style = style;
+    a2.style = style;
+    a3.style = style;
+}
+</script>
+</body>
+</html>
